@@ -1,7 +1,7 @@
-public class Artikel extends Versandhandel {
+public abstract class Artikel {
 
-    private int artikelnummer;
-    private double nettoPreis;
+    private final int artikelnummer;
+    private final double nettoPreis;
 
     public Artikel(int artikelnummer, double nettoPreis) {
         this.artikelnummer = artikelnummer;
@@ -13,7 +13,7 @@ public class Artikel extends Versandhandel {
     }
 
     public String getInfo() {
-
+        return "";
     }
 
 

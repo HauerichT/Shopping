@@ -1,8 +1,10 @@
 public class Buch extends Artikel {
 
-    private String autorenname;
-    private String buchtitel;
-    private int erscheinungsjahr;
+    private final String autorenname;
+    private final String buchtitel;
+    private final int erscheinungsjahr;
+
+    double mehrwertsteuer = 0.07;
 
     public Buch(int artikelnummer, double nettoPreis, String autorenname, String buchtitel, int erscheinungsjahr) {
         super(artikelnummer, nettoPreis);
@@ -11,19 +13,7 @@ public class Buch extends Artikel {
         this.erscheinungsjahr = erscheinungsjahr;
     }
 
-    public String getAutorenname() {
-        return autorenname;
-    }
-
-    public String getBuchtitel() {
-        return buchtitel;
-    }
-
-    public int getErscheinungsjahr() {
-        return erscheinungsjahr;
-    }
-
     public String getInfo() {
-        return "Buch - " + autorenname + ", " + buchtitel + " (" + erscheinungsjahr + ")  " + ": " + getPreis();
+        return "Buch - " + autorenname + ", " + buchtitel + " (" + erscheinungsjahr + ") " + ": " + Math.round(100.0 * (getPreis() + (getPreis() * mehrwertsteuer))) / 100.0 + " Euro";
     }
 }
