@@ -1,21 +1,26 @@
-public abstract class Artikel {
+public class Artikel {
 
-    private final int artikelnummer;
+    // Instanzvariablen
+    private final int artikelNummer;
     private final double nettoPreis;
 
-    public Artikel(int artikelnummer, double nettoPreis) {
-        this.artikelnummer = artikelnummer;
+    // Konstruktor
+    public Artikel(int artikelNummer, double nettoPreis) {
+        this.artikelNummer = artikelNummer;
         this.nettoPreis = nettoPreis;
     }
 
+    // get-Methode: gibt den Netto-Preis zurück
     public double getPreis() {
         return nettoPreis;
     }
 
+    // get-Methode: gibt die Informationen eines Artikels zurück
     public String getInfo() {
         return "";
     }
 
-
-
+    public int getArtikelNummer() {
+        return artikelNummer;
+    }
 }
