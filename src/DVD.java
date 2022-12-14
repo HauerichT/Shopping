@@ -5,7 +5,7 @@ public class DVD extends Artikel {
     private final String dauer;
 
     // Mehrwertsteuer der DVDs
-    double mehrwertsteuer = 0.19;
+    private final double mwst = 0.19;
 
     // Konstruktor
     public DVD(int artikelnummer, double nettoPreis, String filmtitel, String dauer) {
@@ -16,6 +16,6 @@ public class DVD extends Artikel {
 
     // Methode gibt die Informationen einer DVD zurück
     public String getInfo() {
-        return "DVD - " + this.filmtitel + "," + " (" + dauer + ") " + ": " + Math.round(100.0 * (getPreis() + (getPreis() * mehrwertsteuer))) / 100.0 + " Euro";
+        return "DVD - " + this.filmtitel + "," + " (" + dauer + ") " + ": " + Math.round(100.0 * (getPreis() + (getPreis() * mwst))) / 100.0 + " Euro";
     }
 }

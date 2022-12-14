@@ -6,7 +6,7 @@ public class Kleidung extends Artikel {
     private final String farbe;
 
     // Mehrwertsteuer der Kleidungsstücke
-    double mehrwertsteuer = 0.12;
+    private final double mwst = 0.12;
 
     // Konstruktor
     public Kleidung(int artikelnummer, double nettoPreis, String typ, String size, String farbe) {
@@ -18,6 +18,6 @@ public class Kleidung extends Artikel {
 
     // Methode gibt die Informationen eines Kleidungsstücks zurück
     public String getInfo() {
-        return "Kleidung - " + this.typ + ", " + this.farbe + " ("+ this.size +")" + " : " + Math.round(100.0 * (getPreis() + (getPreis() * mehrwertsteuer))) / 100.0 + " Euro";
+        return "Kleidung - " + this.typ + ", " + this.farbe + " ("+ this.size +")" + " : " + Math.round(100.0 * (getPreis() + (getPreis() * mwst))) / 100.0 + " Euro";
     }
 }

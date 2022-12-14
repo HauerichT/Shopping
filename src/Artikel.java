@@ -17,7 +17,7 @@ public class Artikel {
 
     // get-Methode: gibt die Informationen eines Artikels zurück
     public String getInfo() {
-        return "";
+        return "Keine Information gesetzt!";
     }
 
     public int getArtikelNummer() {
